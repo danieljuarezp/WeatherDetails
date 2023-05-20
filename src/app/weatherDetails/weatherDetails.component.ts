@@ -9,7 +9,7 @@ export class WeatherDetails implements OnInit {
   @Input() weatherData: data[];
 
   showData = false;
-  selectedCity: data | null = null;
+  selectedCity: data | undefined = undefined;
 
   ngOnInit() {}
 
