@@ -16,7 +16,7 @@ export class WeatherDetails implements OnInit {
   findCity(value) {
     this.showData = true;
     const city = value.target.value;
-    this.selectedCity = this.weatherData.find(q => q.name === city);
+    this.selectedCity = this.weatherData.find(q => q.name.toLowerCase() === city.toLowerCase());
   }
 }
 
