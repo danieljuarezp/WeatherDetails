@@ -6,7 +6,7 @@
     <input type="text" class="large ml-30" placeholder="Seattle" data-test-id="app-input" (change)="findCity($event)" />
   </section>
 
-  <section class="mt-20 layout-row align-items-center justify-content-center">
+  <section class="mt-20 layout-row align-items-center justify-content-center" *ngIf="showData">
     <div class="card outlined">
         <div data-test-id="weather-details" class="card-text pt-10 layout-row justify-content-between" *ngIf="selectedCity !== null">
             <div class="mt-20 outlined">

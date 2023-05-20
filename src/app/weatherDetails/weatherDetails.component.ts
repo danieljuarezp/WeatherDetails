@@ -8,11 +8,13 @@ import { Component, Input, OnInit } from "@angular/core";
 export class WeatherDetails implements OnInit {
   @Input() weatherData: data[];
 
+  showData = false;
   selectedCity: data | null = null;
 
   ngOnInit() {}
 
   findCity(value) {
+    this.showData = true;
     const city = value.target.value;
     this.selectedCity = this.weatherData.find(q => q.name === city);
   }
